@@ -13,6 +13,15 @@
 		CEF5E9932CA877F10003F635 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF5E9912CA877F10003F635 /* Main.storyboard */; };
 		CEF5E9952CA877F20003F635 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEF5E9942CA877F20003F635 /* Assets.xcassets */; };
 		CEF5E9982CA877F20003F635 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF5E9962CA877F20003F635 /* LaunchScreen.storyboard */; };
+		CEF5E9A12CA878880003F635 /* AppEmptyState.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF5E9A02CA878880003F635 /* AppEmptyState.xib */; };
+		CEF5E9A72CA878FF0003F635 /* AppLoadingState.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF5E9A62CA878FF0003F635 /* AppLoadingState.xib */; };
+		CEF5E9AA2CA879130003F635 /* AppSuccessState.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF5E9A92CA879130003F635 /* AppSuccessState.xib */; };
+		CEF5E9AC2CA879230003F635 /* AppErrorState.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF5E9AB2CA879230003F635 /* AppErrorState.xib */; };
+		CEF5E9AE2CA879440003F635 /* AppLoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF5E9AD2CA879440003F635 /* AppLoadingState.swift */; };
+		CEF5E9B02CA879510003F635 /* AppSuccessState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF5E9AF2CA879510003F635 /* AppSuccessState.swift */; };
+		CEF5E9B22CA8797E0003F635 /* AppErrorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF5E9B12CA8797E0003F635 /* AppErrorState.swift */; };
+		CEF5E9B42CA8798C0003F635 /* AppEmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF5E9B32CA8798C0003F635 /* AppEmptyState.swift */; };
+		CEF5E9B72CA879DA0003F635 /* Container1Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF5E9B62CA879DA0003F635 /* Container1Controller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +33,15 @@
 		CEF5E9942CA877F20003F635 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEF5E9972CA877F20003F635 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEF5E9992CA877F20003F635 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEF5E9A02CA878880003F635 /* AppEmptyState.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppEmptyState.xib; sourceTree = "<group>"; };
+		CEF5E9A62CA878FF0003F635 /* AppLoadingState.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppLoadingState.xib; sourceTree = "<group>"; };
+		CEF5E9A92CA879130003F635 /* AppSuccessState.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppSuccessState.xib; sourceTree = "<group>"; };
+		CEF5E9AB2CA879230003F635 /* AppErrorState.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppErrorState.xib; sourceTree = "<group>"; };
+		CEF5E9AD2CA879440003F635 /* AppLoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLoadingState.swift; sourceTree = "<group>"; };
+		CEF5E9AF2CA879510003F635 /* AppSuccessState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSuccessState.swift; sourceTree = "<group>"; };
+		CEF5E9B12CA8797E0003F635 /* AppErrorState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppErrorState.swift; sourceTree = "<group>"; };
+		CEF5E9B32CA8798C0003F635 /* AppEmptyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEmptyState.swift; sourceTree = "<group>"; };
+		CEF5E9B62CA879DA0003F635 /* Container1Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container1Controller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +74,8 @@
 		CEF5E98A2CA877F10003F635 /* APIUIState */ = {
 			isa = PBXGroup;
 			children = (
+				CEF5E9B52CA8799B0003F635 /* Containers */,
+				CEF5E99F2CA878640003F635 /* UIState */,
 				CEF5E98B2CA877F10003F635 /* AppDelegate.swift */,
 				CEF5E98D2CA877F10003F635 /* SceneDelegate.swift */,
 				CEF5E98F2CA877F10003F635 /* ViewController.swift */,
@@ -65,6 +85,61 @@
 				CEF5E9992CA877F20003F635 /* Info.plist */,
 			);
 			path = APIUIState;
+			sourceTree = "<group>";
+		};
+		CEF5E99F2CA878640003F635 /* UIState */ = {
+			isa = PBXGroup;
+			children = (
+				CEF5E9A52CA878E80003F635 /* LoadingState */,
+				CEF5E9A42CA878AF0003F635 /* SuccessState */,
+				CEF5E9A32CA878A70003F635 /* ErrorState */,
+				CEF5E9A22CA8788C0003F635 /* EmptyState */,
+			);
+			path = UIState;
+			sourceTree = "<group>";
+		};
+		CEF5E9A22CA8788C0003F635 /* EmptyState */ = {
+			isa = PBXGroup;
+			children = (
+				CEF5E9A02CA878880003F635 /* AppEmptyState.xib */,
+				CEF5E9B32CA8798C0003F635 /* AppEmptyState.swift */,
+			);
+			path = EmptyState;
+			sourceTree = "<group>";
+		};
+		CEF5E9A32CA878A70003F635 /* ErrorState */ = {
+			isa = PBXGroup;
+			children = (
+				CEF5E9AB2CA879230003F635 /* AppErrorState.xib */,
+				CEF5E9B12CA8797E0003F635 /* AppErrorState.swift */,
+			);
+			path = ErrorState;
+			sourceTree = "<group>";
+		};
+		CEF5E9A42CA878AF0003F635 /* SuccessState */ = {
+			isa = PBXGroup;
+			children = (
+				CEF5E9A92CA879130003F635 /* AppSuccessState.xib */,
+				CEF5E9AF2CA879510003F635 /* AppSuccessState.swift */,
+			);
+			path = SuccessState;
+			sourceTree = "<group>";
+		};
+		CEF5E9A52CA878E80003F635 /* LoadingState */ = {
+			isa = PBXGroup;
+			children = (
+				CEF5E9A62CA878FF0003F635 /* AppLoadingState.xib */,
+				CEF5E9AD2CA879440003F635 /* AppLoadingState.swift */,
+			);
+			path = LoadingState;
+			sourceTree = "<group>";
+		};
+		CEF5E9B52CA8799B0003F635 /* Containers */ = {
+			isa = PBXGroup;
+			children = (
+				CEF5E9B62CA879DA0003F635 /* Container1Controller.swift */,
+			);
+			path = Containers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +202,11 @@
 			files = (
 				CEF5E9982CA877F20003F635 /* LaunchScreen.storyboard in Resources */,
 				CEF5E9952CA877F20003F635 /* Assets.xcassets in Resources */,
+				CEF5E9A72CA878FF0003F635 /* AppLoadingState.xib in Resources */,
+				CEF5E9AA2CA879130003F635 /* AppSuccessState.xib in Resources */,
 				CEF5E9932CA877F10003F635 /* Main.storyboard in Resources */,
+				CEF5E9A12CA878880003F635 /* AppEmptyState.xib in Resources */,
+				CEF5E9AC2CA879230003F635 /* AppErrorState.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +217,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEF5E9B22CA8797E0003F635 /* AppErrorState.swift in Sources */,
+				CEF5E9AE2CA879440003F635 /* AppLoadingState.swift in Sources */,
+				CEF5E9B42CA8798C0003F635 /* AppEmptyState.swift in Sources */,
 				CEF5E9902CA877F10003F635 /* ViewController.swift in Sources */,
 				CEF5E98C2CA877F10003F635 /* AppDelegate.swift in Sources */,
+				CEF5E9B72CA879DA0003F635 /* Container1Controller.swift in Sources */,
 				CEF5E98E2CA877F10003F635 /* SceneDelegate.swift in Sources */,
+				CEF5E9B02CA879510003F635 /* AppSuccessState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
