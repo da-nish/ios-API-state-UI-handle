@@ -25,7 +25,9 @@ class Container1Controller: UIViewController {
     @IBOutlet var successView: AppSuccessState!
     
   
-    
+    func setView(){
+        print("setting view")
+    }
     
     func executeStates(){
 //        showEmptyState()
